@@ -16,7 +16,10 @@
           <a class="nav-link" href="list_stock.php">LIST STOCK</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="usage_stock.php">PEMAKAIAN</a>
+          <a class="nav-link" href="add_stock.php">ADD STOCK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="usage_stock.php">USE STOCK</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php">LOGOUT</a>

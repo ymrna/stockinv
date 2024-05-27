@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "UPDATE barang SET jumlah_barang = jumlah_barang - $jumlah_pakai WHERE id_barang = $id";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: index.php');
+        header('Location: list_stock.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

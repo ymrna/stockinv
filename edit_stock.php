@@ -21,14 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "UPDATE barang SET kode_barang='$kode_barang', nama_barang='$nama_barang', jumlah_barang='$jumlah_barang', satuan_barang='$satuan_barang', harga_beli='$harga_beli', status_barang='$status_barang' WHERE id_barang=$id";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: index.php');
+        header('Location: list_stock.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 ?>
 
-<h2>Edit Barang</h2>
+<h2 class ="text-center">Edit Barang</h2>
+<div class="row justify-content-center">
+<div class="col-md-6">
 <form method="POST" action="">
     <input type="hidden" name="id" value="<?php echo $barang['id_barang']; ?>">
     <div class="form-group">

@@ -44,8 +44,8 @@ $total_value = $result->fetch_assoc()['total_value'];
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <h2>Dashboard</h2>
             <div class="total-box">
-                <p style="font-size:18px">Total ID Barang: <?php echo $total_items; ?></p>
-                <p style="font-size:18px">Total Rupiah: <?php echo number_format($total_value, 2); ?></p>
+                <p style="font-size:20px">Total Barang: <?php echo $total_items; ?></p>
+                <p style="font-size:20px">Total Rupiah: <?php echo number_format($total_value, 2); ?></p>
             </div>
         </main>
     </div>

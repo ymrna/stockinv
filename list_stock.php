@@ -10,6 +10,10 @@ $result = $conn->query($sql);
     <div class="row justify-content-center">
         <div class="col-md-10">
             <h2 class="text-center">Daftar Barang</h2>
+            <div class="mb-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Cari nama barang...">
+            </div>
+            <a href="add_stock.php" class="btn btn-primary mb-3">Tambah Stok</a>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -41,11 +45,34 @@ $result = $conn->query($sql);
                         </tr>
                     <?php endwhile; ?>
                 </tbody>
+
+                <script>
+    function search() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.querySelector("table");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2]; // Indeks 2 untuk kolom nama barang
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    document.getElementById("searchInput").addEventListener("keyup", search);
+</script>
             </table>
         </div>
     </div>
 </div>
 
 <?php
-include('templates/footer.php');
-?>
+include('templates/footer.php')?>

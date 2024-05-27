@@ -21,7 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<h2>Tambah Barang</h2>
+<h2 class="text-center">Tambah Barang</h2>
+<div class="row justify-content-center">
+    <div class="col-md-6">
 <form method="POST" action="">
     <div class="form-group">
         <label for="kode_barang">Kode Barang</label>

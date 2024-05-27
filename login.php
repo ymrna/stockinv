@@ -62,6 +62,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 </div>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username.trim() === '' || password.trim() === '') {
+            alert('Username dan password tidak boleh kosong!');
+            return false;
+        }
+
+        return true;
+    }
+</script>
 </body>
 </html>
 <?php include ('templates/footer.php'); ?>
