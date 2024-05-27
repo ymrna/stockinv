@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
     $sql = "DELETE FROM barang WHERE id_barang = $id";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: index.php');
+        header('Location: list_stock.php');
     } else {
         echo "Error deleting record: " . $conn->error;
     }
